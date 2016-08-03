@@ -1,0 +1,24 @@
+.brand-logo{
+	margin-left:3%;
+}
+
+.salad-cover {
+    height: 55vh;
+    background: url('../img/salad.jpg') center center no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.tagline{
+    text-shadow: 0 0 10px #000;
+    color: #fff;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
