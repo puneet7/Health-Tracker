@@ -5,6 +5,8 @@
 .salad-cover {
     height: 55vh;
     background: url('../img/salad.jpg') center center no-repeat scroll;
+    padding-top: 64px!important;
+    margin-top: -64px!important;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -21,4 +23,46 @@
 }
 .icon-block .material-icons {
 	font-size: inherit;
+}
+
+.plan_diet{
+    font-align: right;
+}
+
+.section{
+    padding-top: 64px!important;
+    margin-top: -64px!important;
+}
+
+#BMI-calc-card{ /*To invisible Block*/
+	display: none;
+}
+
+#BMI-calc-card-sm{ /*To invisible Block*/
+    display: none;
+}
+
+#BMI-field label {
+    color: #FFF;
+}
+
+/* label focus color */
+#BMI-field input[type=text]:focus + label {
+    color: #FFF;
+}
+
+#BMI-field input[type=text]:focus {
+    border-bottom: 1px solid #4db6ac;
+    box-shadow: 0 1px 0 0 #4db6ac;
+}
+
+#BMI-field input[type=text]{
+    border-bottom: 1px #FFF;
+    box-shadow: 0 1px 0 0 #FFF;
+}
+
+/* Adding fixed height because content in every card will be different and fixed height will make it look consistent */
+#what-we-do-cards{
+    height: 300px;
+    overflow: hidden;
 }
