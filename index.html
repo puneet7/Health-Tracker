@@ -21,6 +21,7 @@
             <ul class="right hide-on-med-and-down">
               <li><a href="#top_page" class="smoothScroll waves-effect waves-light">Home</a></li>
               <li><a href="#sec_planmydiet" class="smoothScroll waves-effect waves-light">Plan My Diet</a></li>
+              <li><a href="#sec_BMI" class="smoothScroll waves-effect waves-light">MISC</a></li>
               <li><a href="#sec_Talk_Expert" class="smoothScroll waves-effect waves-light">Talk to an Expert</a></li>
               <li><a href="#signupmodal" class="waves-effect waves-light modal-trigger">Sign Up</a></li>
               <li><a href="#loginmodal" class="waves-effect waves-light modal-trigger">Log In</a></li>
@@ -28,6 +29,7 @@
             <ul class="side-nav " id="mobile-demo">
 	            <li><a href="#top_page" class="smoothScroll waves-effect waves-orange">Home</a></li>
 	            <li><a href="#sec_planmydiet" class="smoothScroll waves-effect waves-orange">Plan My Diet</a></li>
+              <li><a href="#sec_BMI" class="smoothScroll waves-effect waves-light">MISC</a></li>
 	            <li><a href="#sec_Talk_Expert" class="smoothScroll waves-effect waves-orange">Talk to an Expert</a></li>
 	            <li><a href="#signupmodal" class="waves-effect waves-orange modal-trigger">Sign Up</a></li>
 	            <li><a href="#loginmodal" class="waves-effect waves-orange modal-trigger">Log In</a></li>
@@ -90,7 +92,7 @@
 					</div>
 
 					<div class="row">
-						<input type="submit" class="btn-flat modal-action waves-effect waves-orange" name="Sign Up">
+						<input type="submit" class="btn-flat modal-action waves-effect waves-orange" value="Sign Up">
 					</div>
 				</form>
 			</div>
@@ -178,7 +180,6 @@
 		      				  This is an example quotation that uses the blockquote tag.
 		      				</blockquote>
                   <br><br>
-		      				<!-- TODO: Remove inline css and find a better way to position the Button -->
 		      				<center><a href = "#!"  class = "btn orange waves-effect waves-light">Start Planning</a></center>
 		      		</div>
 		      </div>
@@ -189,31 +190,29 @@
   <div class = "divider"></div>
   
   <!--BMI Calculator section-->
-  <div class="container">    
-      <div id="sec_BMI_calc" class="section hide-on-small-only"><!-- for med& large screen -->
+  <div id="sec_BMI" class="container">    
+      <div class="section hide-on-small-only"><!-- for med& large screen -->
         <div class="row">
           <div id="BMI-calc-card" class="col s12 m7">
             <div class="card orange">
               <div class="card-content white-text">
                 <h4>BMI Calculator</h4>
                 <div class="row">
-                    <!-- <form class="col s12"> -->
-                        <div id="BMI-field" class="input-field col s12">
-                          <input id="My_weight" type="text">
+                        <div id="BMI-weight" class="input-field col s12 label-color ">
+                          <input id="My_weight" type="text" >
                           <label for="My_weight">Weight (in kg)</label>
                         </div>
-                        <div id="BMI-field" class="input-field col s12">
+                        <div id="BMI-height" class="input-field col s12 label-color">
                           <input id="My_height" type="text">
                           <label for="My_height">Height (in m)</label>
                         </div>
                         <br>
                         <div class="col s8"></div>
-                        <button class="btn deep-orange lighten-1 waves-effect waves-light col s4" onclick="BMI_calculator()">Calculate</button>
-                        <div id="BMI-field" class="input-field col s12">
+                        <button id="BMI-btn" class="btn deep-orange lighten-1 waves-effect waves-light col s4" onclick="BMI_calculator()">Calculate</button>
+                        <div id="BMI-result" class="input-field col s12 label-color">
                           <input id="My_BMI" type="text">
                           <label for="My_BMI">Body Mass Index</label>
                         </div>
-                    <!-- </form> -->
                 </div>
               </div>
             </div>
@@ -228,7 +227,7 @@
         </div>
       </div>
 
-      <div id="sec_BMI_calc" class="section hide-on-med-and-up"><!-- for small screen -->
+      <div class="section hide-on-med-and-up"><!-- for small screen -->
         <div class="row">
           <div id="BMI-desc-sm" class="col s12 m12">
             <center>
@@ -241,7 +240,6 @@
             <div class="card orange">
               <div class="card-content white-text">
                 <div class="row">
-                    <!-- <form class="col s12"> -->
                         <div id="BMI-field" class="input-field col s12">
                           <input id="My_weight-sm" type="text">
                           <label for="My_weight-sm">Weight (in kg)</label>
@@ -257,7 +255,6 @@
                           <input id="My_BMI-sm" type="text">
                           <label for="My_BMI-sm">Body Mass Index</label>
                         </div>
-                    <!-- </form> -->
                 </div>
               </div>
             </div>

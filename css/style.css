@@ -42,22 +42,27 @@
     display: none;
 }
 
-#BMI-field label {
+.label-color label {
     color: #FFF;
 }
 
 /* label focus color */
-#BMI-field input[type=text]:focus + label {
+.label-color input[type=text]:focus + label {
     color: #FFF;
 }
 
-#BMI-field input[type=text]:focus {
+.label-color input[type=text]:focus {
     border-bottom: 1px solid #4db6ac;
     box-shadow: 0 1px 0 0 #4db6ac;
 }
 
-#BMI-field input[type=text]{
+.label-color input[type=text]{
     border-bottom: 1px #FFF;
+    box-shadow: 0 1px 0 0 #FFF;
+}
+
+.error-label-color input[type=text]{
+    border-bottom: 1px #ff7043;
     box-shadow: 0 1px 0 0 #FFF;
 }
 

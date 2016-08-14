@@ -36,12 +36,31 @@ function openCalcS(){//for small devices
 
 
 function BMI_calculator(){//for med& large devices
-	var My_weight = document.getElementById('My_weight').value;
-	var My_height = document.getElementById('My_height').value;
 
-	var BMI = My_weight*10000/(My_height*My_height)
-	document.getElementById('My_BMI').focus();
-	document.getElementById('My_BMI').value = BMI.toFixed(2);
+	var My_weight = '';
+	var My_height = '';
+
+	if(parseInt(document.getElementById('My_weight').value))
+		My_weight =  parseInt(document.getElementById('My_weight').value);
+
+	if(parseInt(document.getElementById('My_height').value))
+ 		My_height =  parseInt(document.getElementById('My_height').value);
+
+	if(My_weight.toString().trim().length == 0 || typeof My_weight == 'string' ) {
+		return;
+	}
+
+	else{
+		if(My_height.toString().trim().length == 0 || typeof My_height == 'string'){
+			return;
+		}
+		else{
+			var BMI = My_weight*10000/(My_height*My_height)
+			document.getElementById('My_BMI').focus();
+			document.getElementById('My_BMI').value = BMI.toFixed(2);
+		}
+	}
+
 }
 
 function BMI_calculatorS(){//for small devices
