@@ -137,21 +137,21 @@
       <br>
 
       <div class = "row wow bounceInUp">
-          <div class="card-panel hoverable col l4 m4 s12 wow fadeInUp"  id = "what-we-do-cards" data-wow-delay="1.5s">
+          <div class="card-panel hoverable col l4 m4 s12 wow fadeInUp"  id = "what-we-do-cards" data-wow-delay="1.1s">
             <i class="icon-compass medium-icon"></i>
               <h5 class = "header orange-text center">Recommend Exercises</h5>
               <hr>
               <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteu sunt in culpa qui officia.</p>
           </div>
 
-          <div class="card-panel hoverable col l4 m4 s12 wow fadeInUp"  id = "what-we-do-cards" data-wow-delay="1.2s">
+          <div class="card-panel hoverable col l4 m4 s12 wow fadeInUp"  id = "what-we-do-cards" data-wow-delay="0.8s">
             <i class="icon-chat medium-icon"></i>
               <h5 class = "header orange-text center">Food Info</h5>
               <hr>
               <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteu sunt in culpa qui officia.</p>
           </div>
 
-          <div class="card-panel hoverable col l4 m4 s12 wow fadeInUp"  id = "what-we-do-cards" data-wow-delay="0.9s">
+          <div class="card-panel hoverable col l4 m4 s12 wow fadeInUp"  id = "what-we-do-cards" data-wow-delay="0.5s">
             <i class="icon-browser medium-icon"></i>
               <h5 class = "header orange-text center">Contact Dietitians</h5>
               <hr>
@@ -203,7 +203,7 @@
                           <label for="My_weight">Weight (in kg)</label>
                         </div>
                         <div id="BMI-height" class="input-field col s12 label-color">
-                          <input id="My_height" type="text">
+                          <input id="My_height" type="text" onkeypress="if (event.keyCode==13) document.getElementById('BMI-btn').click();" >
                           <label for="My_height">Height (in m)</label>
                         </div>
                         <br>
@@ -240,18 +240,18 @@
             <div class="card orange">
               <div class="card-content white-text">
                 <div class="row">
-                        <div id="BMI-field" class="input-field col s12">
+                        <div id="BMI-field" class="input-field label-color col s12">
                           <input id="My_weight-sm" type="text">
                           <label for="My_weight-sm">Weight (in kg)</label>
                         </div>
-                        <div id="BMI-field" class="input-field col s12">
-                          <input id="My_height-sm" type="text">
+                        <div id="BMI-field" class="input-field  label-color col s12">
+                          <input id="My_height-sm" type="text" onkeypress="if (event.keyCode==13) document.getElementById('BMI-btn-sm').click();">
                           <label for="My_height-sm">Height (in m)</label>
                         </div>
                         <br>
                         <div class="col s7"></div>
-                        <button class="btn deep-orange lighten-1 waves-effect waves-light col s5" onclick="BMI_calculatorS()">Calculate</button>
-                        <div id="BMI-field" class="input-field col s12">
+                        <button class="btn deep-orange lighten-1 waves-effect waves-light col s5" id = "BMI-btn-sm" onclick="BMI_calculatorS()">Calculate</button>
+                        <div id="BMI-field" class="input-field label-color col s12">
                           <input id="My_BMI-sm" type="text">
                           <label for="My_BMI-sm">Body Mass Index</label>
                         </div>
@@ -262,6 +262,32 @@
         </div>
       </div>
   </div>
+
+<!--Calorie counter section-->
+  <div class="container">
+    <div id="calorie-desc" class="s12 m12 ">
+      <center>
+        <h1 id="calorie_header" class = "header center orange-text wow fadeInUp" data-wow-delay="0.6s">Calorie Finder</h1>
+      </center>
+    </div>
+     <div class="row">
+        <form class="s12" id="cal_find">
+          <div class="col m2"></div>
+          <div class="input-field col s12 m8">
+            <input id="calorie_finder" type="text">
+            <label for="calorie_finder">Food item here</label>
+            <center><a href = "javascript:void(0)"  class = "btn orange waves-effect waves-light wow zoomIn " onclick="calfind_card()" id="cal_find_btn">Find</a></center>
+          </div>
+        </form>
+        <div class="col s12 m6" id="cal_card">
+          <div class="card-panel orange">
+            <span class="white-text">I am a very simple card. I am good at containing small bits of information.
+            I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+            </span>
+          </div>
+        </div>
+      </div>
+  </div>  
 
 
   <div class="divider"></div>
@@ -300,6 +326,5 @@
   <script src="js/smoothscroll.js"></script>
   <script type="text/javascript" src="js/wowinit.js"></script>
   <script type="text/javascript" src="js/home.js"></script>
-
   </body>
 </html>

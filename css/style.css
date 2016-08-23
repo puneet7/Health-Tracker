@@ -71,3 +71,7 @@
     height: 300px;
     overflow: hidden;
 }
+
+#cal_card{ /*To invisible Block*/
+    display: none;
+}
