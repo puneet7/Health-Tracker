@@ -23,81 +23,70 @@
               <li><a href="#sec_planmydiet" class="smoothScroll waves-effect waves-light">Plan My Diet</a></li>
               <li><a href="#sec_BMI" class="smoothScroll waves-effect waves-light">MISC</a></li>
               <li><a href="#sec_Talk_Expert" class="smoothScroll waves-effect waves-light">Talk to an Expert</a></li>
+              <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Login As<i class="material-icons right">arrow_drop_down</i></a></li>
               <li><a href="#signupmodal" class="waves-effect waves-light modal-trigger">Sign Up</a></li>
-              <li><a href="#loginmodal" class="waves-effect waves-light modal-trigger">Log In</a></li>
             </ul>
+
             <ul class="side-nav " id="mobile-demo">
-	            <li><a href="#top_page" class="smoothScroll waves-effect waves-orange">Home</a></li>
-	            <li><a href="#sec_planmydiet" class="smoothScroll waves-effect waves-orange">Plan My Diet</a></li>
-              <li><a href="#sec_BMI" class="smoothScroll waves-effect waves-light">MISC</a></li>
-	            <li><a href="#sec_Talk_Expert" class="smoothScroll waves-effect waves-orange">Talk to an Expert</a></li>
-	            <li><a href="#signupmodal" class="waves-effect waves-orange modal-trigger">Sign Up</a></li>
-	            <li><a href="#loginmodal" class="waves-effect waves-orange modal-trigger">Log In</a></li>
+              <li><a href="#top_page" class="smoothScroll waves-effect waves-orange">Home</a></li>
+              <li><a href="#sec_planmydiet" class="smoothScroll waves-effect waves-orange">Plan My Diet</a></li>
+              <li><a href="#sec_BMI" class="smoothScroll waves-effect waves-orange">MISC</a></li>
+              <li><a href="#sec_Talk_Expert" class="smoothScroll waves-effect waves-orange">Talk to an Expert</a></li>
+              <li class = "navbar-text">LogIn As: </li>
+              <li>
+                <a href="#!">&nbsp;&nbsp;&nbsp;User</a>
+                <a href="#!">&nbsp;&nbsp;&nbsp;Expert</a>
+                <a href="#!">&nbsp;&nbsp;&nbsp;Admin</a> 
+              </li>
+              <li><a href="#signupmodal" class="waves-effect waves-orange modal-trigger">Sign Up</a></li>
             </ul>
         </div>
       </nav>
     </div>
 
-  <!-- Login Modal Structure -->
-  <div id="loginmodal" class="modal">
-    <div class="modal-content">
-        <div class="row">
-          <form class="col s12">
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="last_name" type="text" class="validate">
-                <label for="last_name">Username</label>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="password" type="password" class="validate">
-                <label for="password">Password</label>
-              </div>
-            </div>
-            <div class = "row">
-              <button class = "btn-flat modal-action waves-effect waves-orange">Log In</button>
-            </div>
-          </form>
-        </div>
-    </div>
-  </div>
+<!-- Dropdown Structure -->
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="#!">User</a></li>
+    <li><a href="#!">Expert</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">Admin</a></li>
+  </ul>
   
    <!-- Signup Modal Structure -->
-	<div id="signupmodal" class="modal">
-		<div class="modal-content">
-			<div class="row">
-				<form class="col s12">
-					<div class="row">
-						<div class="input-field col s6">
-							<input id="first_name" type="text" class="validate">
-							<label for="first_name">First Name</label>
-						</div>
-						<div class="input-field col s6">
-							<input id="last_name" type="text" class="validate">
-							<label for="last_name">Last Name</label>
-						</div>
-					</div>
+  <div id="signupmodal" class="modal">
+    <div class="modal-content">
+      <div class="row">
+        <div class="col s12" >
+        	<div id = "errormessage"></div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input value = "" id="first_name" type="text" class="validate">
+              <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input value = "" id="last_name" type="text" class="validate">
+              <label for="last_name">Last Name</label>
+            </div>
+          </div>
 
-					<div class="row">
-						<div class="input-field col s12">
-							<input id="email" type="email" class="validate">
-							<label for="email">Email</label>
-						</div>
-						<div class="input-field col s12">
-							<input id="password" type="password" class="validate">
-							<label for="password">Password</label>
-						</div>
-					</div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input value = "" id="signup_email" type="email" class="validate">
+              <label id="check_valid" for="email" data-error = "Wrong Email.">Email</label>
+            </div>
+            <div class="input-field col s12">
+              <input value = "" id="signup_pass" type="password" class="validate">
+              <label for="password">Password</label>
+            </div>
+          </div>
 
-					<div class="row">
-						<input type="submit" class="btn-flat modal-action waves-effect waves-orange" value="Sign Up">
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
+          <div class="row">
+            <button type="submit" class="btn-flat modal-action waves-effect waves-orange" id = "signup_btn" onclick="signup_click()">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   <header class="salad-cover wow fadeIn" id = "top_page"></header>
@@ -166,23 +155,23 @@
   <!-- Plan My Diet Section -->
   <div class="container">
       <div class="section" id = "sec_planmydiet">   
-      		<center><h1 class = "header center orange-text wow fadeInUp" data-wow-delay = "0.3s">Plan My Diet</h1></center>
+          <center><h1 class = "header center orange-text wow fadeInUp" data-wow-delay = "0.3s">Plan My Diet</h1></center>
 
           <div class = "col s12 m12 l4 wow fadeInUp" data-wow-delay = "0.3s">
               <center><img class = "card-panel hoverable responsive-img" src="http://placehold.it/300x300"></center>
           </div>
 
-      		<div class = "row">
-		      		<div class = "col s12 m12 l12 plan_diet wow fadeInUp" data-wow-delay = "0.3s">
-		      				Lorem ipsum dolor sit amet, platonem consulatu pertinacia no eos, tale movet iudicabit id vix. Mei eius essent ei. Vel an quas vivendum tincidunt, mel quando ocurreret efficiantur cu.Lorem ipsum dolor sit amet, platonem consulatu pertinacia no eos, tale movet iudicabit id vix. Mei eius essent ei.
-		      				<br>
-									<blockquote>
-		      				  This is an example quotation that uses the blockquote tag.
-		      				</blockquote>
+          <div class = "row">
+              <div class = "col s12 m12 l12 plan_diet wow fadeInUp" data-wow-delay = "0.3s">
+                  Lorem ipsum dolor sit amet, platonem consulatu pertinacia no eos, tale movet iudicabit id vix. Mei eius essent ei. Vel an quas vivendum tincidunt, mel quando ocurreret efficiantur cu.Lorem ipsum dolor sit amet, platonem consulatu pertinacia no eos, tale movet iudicabit id vix. Mei eius essent ei.
+                  <br>
+                  <blockquote>
+                    This is an example quotation that uses the blockquote tag.
+                  </blockquote>
                   <br><br>
-		      				<center><a href = "#!"  class = "btn orange waves-effect waves-light">Start Planning</a></center>
-		      		</div>
-		      </div>
+                  <center><a href = "#!"  class = "btn orange waves-effect waves-light">Start Planning</a></center>
+              </div>
+          </div>
       </div>
       <br><br>
   </div>
@@ -323,6 +312,7 @@
   <script src="js/materialize.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/wow.min.js"></script>
+  <script src="js/dbdata.js"></script>
   <script src="js/smoothscroll.js"></script>
   <script type="text/javascript" src="js/wowinit.js"></script>
   <script type="text/javascript" src="js/home.js"></script>

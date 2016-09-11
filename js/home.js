@@ -1,5 +1,6 @@
-// TODO : Fast Double Click on buttons related to BMI Calculator and Calorie Finder creates issues
+// Fast Double Click on button related to BMI Calculator and Calorie Finder creates issues
 
+// TODO : Fix animation bug after clicking twice quickly on Find and Close
 var countClick = 0;
 var smcountClick =0;
 function openCalc(){//for med& large devices
@@ -12,12 +13,14 @@ function openCalc(){//for med& large devices
 		document.getElementById('btn-show-calc').innerHTML = "Close";
 	}
 	else{//Click on 'Close' to close calculator
+		document.getElementById('btn-show-calc').disabled = true;
 		animate_fadeOutBMIcards();
 		setTimeout(function(){
 			document.getElementById('BMI-desc').className = "col s12 m12";
 			document.getElementById('p-BMI').className = "wow fadeInDown";
 			document.getElementById('BMI_header').style.fontSize = "";
 			document.getElementById('btn-show-calc').innerHTML = "Calculate BMI";
+			document.getElementById('btn-show-calc').disabled = false;
 		},300);
 	}
 }
@@ -31,14 +34,14 @@ function openCalcS(){//for small devices
 		document.getElementById('btn-show-calc-sm').innerHTML = "Close";
 	}
 	else{//Click on 'Close' to close calculator
-		document.getElementById('BMI-desc-sm').className = "col s12 m12";
+		document.getElementById('btn-show-calc-sm').disabled = true;
 		animate_fadeOutBMI_smcards();
 		setTimeout(function(){
-			document.getElementById('cal_find').className = "col s12 m12";
-			document.getElementById('cal_find_btn').innerHTML = "Find";
-		},300);
+			document.getElementById('BMI-desc-sm').className = "col s12 m12";
+			document.getElementById('btn-show-calc-sm').innerHTML = "Calculate BMI";
+			document.getElementById('btn-show-calc-sm').disabled = false;
+		}, 300);
 		document.getElementById('BMI_header-sm').style.fontSize = "";
-		document.getElementById('btn-show-calc-sm').innerHTML = "Calculate BMI";
 	}
 }
 
@@ -80,27 +83,27 @@ function BMI_calculatorS(){//for small devices
 	document.getElementById('My_BMI-sm').value = BMI.toFixed(2);
 }
 
+
+// TODO : Fix animation bug after clicking twice quickly on Find and Close
+
 var cal_count_click=0;
 function calfind_card(){
 	cal_count_click+=1
-	//Click on 'Find' to open cal_find card
-	if(cal_count_click%2==1){											
-
+	if(cal_count_click%2==1){//Click on 'Find' to open calfind_card
 		document.getElementById('cal_card').className="col s12 m6";
 		setTimeout(function(){
 			animate_fadeIncards();
 		}, 300);
-		
 		document.getElementById('cal_find').className="col s12 m6";
 		document.getElementById('cal_find_btn').innerHTML = "Close";
-
 	}
-	//Else Click on 'Close' to close cal_find card
-	else{															
+	else{//Click on 'Close' to close cafind_card
+		document.getElementById('cal_find_btn').disabled = true;
 		animate_fadeOutcards();
 		setTimeout(function(){
 			document.getElementById('cal_find').className = "col s12 m12";
 			document.getElementById('cal_find_btn').innerHTML = "Find";
+			document.getElementById('cal_find_btn').disabled = false;
 		},300);
 	}
 
