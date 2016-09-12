@@ -18,7 +18,7 @@ if(isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['email_id'])
 		$sql_query = "INSERT INTO `htracker`.`userdetails` (`ID`, `Fname`, `Lname`, `Email`, `Password`) VALUES (NULL, '$fname', '$lname', '$email_id', '$pass')";
 
 		//Fires a query in a if condition with '@' operator (@ operator suppresses errors). If any error occurs while executing the query, else block gets executed
-		if(@$sql_query_result = mysql_query($sql_query)){
+		if($sql_query_result = mysqli_query($conn, $sql_query)){
 			echo '<span style = "color:green">Account Created Succesfully. Please login to continue</span>';
 		}
 		else{
@@ -26,7 +26,7 @@ if(isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['email_id'])
 		}
 
 	}
-	
+
 	else{
 		echo '<span style = "color:red;">Please fill all the fields</span>'; 
 	}
