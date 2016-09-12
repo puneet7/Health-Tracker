@@ -10,7 +10,7 @@ $mysql_db ='htracker';
 
 //Establish connection with the server. @ is an error control operator, any error/warning message genereated will not be displayed on the browser. Rather the other message inside die("...") will be displayed.
 
-@$conn = mysqli_connect($mysql_host, $mysql_user, $mysql_password) or die($error);
+$conn = mysqli_connect($mysql_host, $mysql_user, $mysql_password) or die($error);
 
 mysqli_select_db($conn, $mysql_db) or die($db_conn_err);
 
