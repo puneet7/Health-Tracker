@@ -13,81 +13,14 @@
 
 <body>
   
-    <div class = "navbar-fixed"> 
-      <nav>
-        <div class="nav-wrapper orange accent-3 ">
-            <a href="#" class="brand-logo waves-effect waves-light">Health Tracker</a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-              <li><a href="#top_page" class="smoothScroll waves-effect waves-light">Home</a></li>
-              <li><a href="#sec_planmydiet" class="smoothScroll waves-effect waves-light">Plan My Diet</a></li>
-              <li><a href="#sec_BMI" class="smoothScroll waves-effect waves-light">MISC</a></li>
-              <li><a href="#sec_Talk_Expert" class="smoothScroll waves-effect waves-light">Talk to an Expert</a></li>
-              <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Login As<i class="material-icons right">arrow_drop_down</i></a></li>
-              <li><a href="#signupmodal" class="waves-effect waves-light modal-trigger">Sign Up</a></li>
-            </ul>
+<?php
+//if User is a guest use this:
+	include 'guestnav.php';
 
-            <ul class="side-nav " id="mobile-demo">
-              <li><a href="#top_page" class="smoothScroll waves-effect waves-orange">Home</a></li>
-              <li><a href="#sec_planmydiet" class="smoothScroll waves-effect waves-orange">Plan My Diet</a></li>
-              <li><a href="#sec_BMI" class="smoothScroll waves-effect waves-orange">MISC</a></li>
-              <li><a href="#sec_Talk_Expert" class="smoothScroll waves-effect waves-orange">Talk to an Expert</a></li>
-              <li class = "navbar-text">LogIn As: </li>
-              <li>
-                <a href="#!">&nbsp;&nbsp;&nbsp;User</a>
-                <a href="#!">&nbsp;&nbsp;&nbsp;Expert</a>
-                <a href="#!">&nbsp;&nbsp;&nbsp;Admin</a> 
-              </li>
-              <li><a href="#signupmodal" class="waves-effect waves-orange modal-trigger">Sign Up</a></li>
-            </ul>
-        </div>
-      </nav>
-    </div>
+//if user is logged in use this:
+	// include 'loggedinnav.php';
 
-<!-- Dropdown Structure -->
-  <ul id="dropdown1" class="dropdown-content">
-    <li><a href="#!">User</a></li>
-    <li><a href="#!">Expert</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">Admin</a></li>
-  </ul>
-  
-   <!-- Signup Modal Structure -->
-  <div id="signupmodal" class="modal">
-    <div class="modal-content">
-      <div class="row">
-        <div class="col s12" >
-        	<div id = "errormessage"></div>
-          <div class="row">
-            <div class="input-field col s6">
-              <input value = "" id="first_name" type="text" class="validate">
-              <label for="first_name">First Name</label>
-            </div>
-            <div class="input-field col s6">
-              <input value = "" id="last_name" type="text" class="validate">
-              <label for="last_name">Last Name</label>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="input-field col s12">
-              <input value = "" id="signup_email" type="email" class="validate">
-              <label id="check_valid" for="email" data-error = "Wrong Email.">Email</label>
-            </div>
-            <div class="input-field col s12">
-              <input value = "" id="signup_pass" type="password" class="validate">
-              <label for="password">Password</label>
-            </div>
-          </div>
-
-          <div class="row">
-            <button type="submit" class="btn-flat modal-action waves-effect waves-orange" id = "signup_btn" onclick="signup_click()">Sign Up</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
+?>
 
   <header class="salad-cover wow fadeIn" id = "top_page"></header>
 
