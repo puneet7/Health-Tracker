@@ -1,6 +1,6 @@
 <?php 
 
-include 'connectdb.php';
+require_once 'connectdb.php';
 
 //Check if all fields in the modal are set
 if(isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['email_id']) && isset($_POST['pass']) ){	
@@ -9,7 +9,7 @@ if(isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['email_id'])
 	$fname = htmlentities($_POST['fname']);
 	$lname = htmlentities($_POST['lname']);
 	$email_id = htmlentities($_POST['email_id']);
-	$pass = htmlentities($_POST['pass']);
+	$pass = md5(htmlentities($_POST['pass']));
 
 	//Make sure no field is left empty
 	if(!empty($fname) && !empty($lname) && !empty($email_id) && !empty($pass) ){

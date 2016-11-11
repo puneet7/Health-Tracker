@@ -8,4 +8,6 @@
     $(".dropdown-button").dropdown();
 
   }); 
+
+  $('select').material_select();
 })(jQuery); 

@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Starter Template - Materialize</title>
+  <title>Health-Tracker</title>
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -15,11 +15,14 @@
   
 <?php
 //if User is a guest use this:
-	include 'guestnav.php';
-
+    session_start();
+    if(isset($_SESSION['login_user_session'])){
+     include 'loggedinnav.php';
+    }
+  else{
 //if user is logged in use this:
-	// include 'loggedinnav.php';
-
+    include 'guestnav.php';
+  } 
 ?>
 
   <header class="salad-cover wow fadeIn" id = "top_page"></header>
@@ -28,31 +31,31 @@
   <div class="container">
 
       <div class="section" id  ="home_sec">   
-         <center><h1 class = "header center orange-text wow bounceInLeft">What we do</h1></center>
-         <center class = "wow bounceInRight">Lorem ipsum dolor sit amet, platonem consulatu pertinacia no eos, tale movet iudicabit id vix. Mei eius essent ei. Vel an quas vivendum tincidunt, mel quando ocurreret efficiantur cu. Repudiare posidonium ea sea. Ut error placerat sed, no sit choro utinam inimicus, ponderum laboramus usu te. Dicat regione officiis te sit. Vim cu ceteros volumus.</center><br>
+         <center><h1 class = "header center teal-text text-darken-1 wow bounceInLeft">What We Do</h1></center>
+         <center class = "wow bounceInRight">We believe — and medical studies prove — that the best way to lose weight and keep it off is to simply keep track of the foods you eat. Gimmicky machines and fad diets don't work, so we designed a free website that makes calorie counting and food tracking easy. We also provide you with a diet to ensure you keep track of your calories.</center><br>
       </div>
       <br><br>
 
       <div class = "row wow bounceInUp">
-          <div class="card-panel hoverable col l4 m4 s12 wow fadeInUp" id = "what-we-do-cards" data-wow-delay="0.6s">
+          <div class="card-panel hoverable col l4 m4 s12 wow fadeInUp" id = "what-we-do-cards" data-wow-delay="0.5s">
             <i class="icon-cloud medium-icon"></i>
-              <h5 class = "header orange-text center">Plan Your Diet</h5>
+              <h5 class = "header teal-text text-darken-1 center">Plan Your Diet</h5>
               <hr>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteu sunt in culpa qui officia.</p>
+              <p>Get a flexible diet to make sure that you don't exceed your daily target limits. Don't like the diet? Don't worry, generate a new one!</p>
           </div>
 
-          <div class="card-panel hoverable col l4 m4 s12 wow fadeInUp" id = "what-we-do-cards" data-wow-delay="0.9s">
+          <div class="card-panel hoverable col l4 m4 s12 wow fadeInUp" id = "what-we-do-cards" data-wow-delay="0.8s">
             <i class="icon-mobile medium-icon"></i>
-              <h5 class = "header orange-text center">Track Progress</h5>
+              <h5 class = "header teal-text text-darken-1 center">Track Progress</h5>
               <hr>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteu sunt in culpa qui officia.</p>
+              <p>Get a graphical representation of the calories that you have eaten and the calories that you have burned of the last 30 entries. </p>
           </div>
 
-          <div class="card-panel hoverable col l4 m4 s12 wow fadeInUp" id = "what-we-do-cards"  data-wow-delay="1.2s">
+          <div class="card-panel hoverable col l4 m4 s12 wow fadeInUp" id = "what-we-do-cards"  data-wow-delay="1.1s">
             <i class="icon-laptop medium-icon"></i>
-              <h5 class = "header orange-text center">Calculate BMI</h5>
+              <h5 class = "header teal-text text-darken-1 center">Calculate BMI</h5>
               <hr>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteu sunt in culpa qui officia.</p>
+              <p>Easy to use BMI calculator, no need to create an account either.</p>
           </div>
       </div>
 
@@ -61,23 +64,23 @@
       <div class = "row wow bounceInUp">
           <div class="card-panel hoverable col l4 m4 s12 wow fadeInUp"  id = "what-we-do-cards" data-wow-delay="1.1s">
             <i class="icon-compass medium-icon"></i>
-              <h5 class = "header orange-text center">Recommend Exercises</h5>
+              <h5 class = "header teal-text text-darken-1 center">Link Exercises</h5>
               <hr>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteu sunt in culpa qui officia.</p>
+              <p>We'll provide you links to different exercise tutorials/videos on youtube to ensure that you always stay fit. </p>
           </div>
 
           <div class="card-panel hoverable col l4 m4 s12 wow fadeInUp"  id = "what-we-do-cards" data-wow-delay="0.8s">
             <i class="icon-chat medium-icon"></i>
-              <h5 class = "header orange-text center">Food Info</h5>
+              <h5 class = "header teal-text text-darken-1 center">Food Info</h5>
               <hr>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteu sunt in culpa qui officia.</p>
+              <p>Get the calorie information about various foods stored in our database. </p>
           </div>
 
           <div class="card-panel hoverable col l4 m4 s12 wow fadeInUp"  id = "what-we-do-cards" data-wow-delay="0.5s">
             <i class="icon-browser medium-icon"></i>
-              <h5 class = "header orange-text center">Contact Dietitians</h5>
+              <h5 class = "header teal-text text-darken-1 center">Contact Dietitians</h5>
               <hr>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteu sunt in culpa qui officia.</p>
+              <p>We provide you a platform where you can contact other dieticians/experts who are certainly willing to help you out.</p>
           </div>
       </div>
 
@@ -88,21 +91,21 @@
   <!-- Plan My Diet Section -->
   <div class="container">
       <div class="section" id = "sec_planmydiet">   
-          <center><h1 class = "header center orange-text wow fadeInUp" data-wow-delay = "0.3s">Plan My Diet</h1></center>
+          <center><h1 class = "header center teal-text text-darken-1 wow fadeInUp" data-wow-delay = "0.3s">Plan My Diet</h1></center>
 
           <div class = "col s12 m12 l4 wow fadeInUp" data-wow-delay = "0.3s">
-              <center><img class = "card-panel hoverable responsive-img" src="http://placehold.it/300x300"></center>
+              <center><img class = "card-panel hoverable responsive-img" width="300" height="300" src="./img/dietplan.jpg"></center>
           </div>
 
           <div class = "row">
               <div class = "col s12 m12 l12 plan_diet wow fadeInUp" data-wow-delay = "0.3s">
-                  Lorem ipsum dolor sit amet, platonem consulatu pertinacia no eos, tale movet iudicabit id vix. Mei eius essent ei. Vel an quas vivendum tincidunt, mel quando ocurreret efficiantur cu.Lorem ipsum dolor sit amet, platonem consulatu pertinacia no eos, tale movet iudicabit id vix. Mei eius essent ei.
+                  This month's diet is next month's body! Our priority is providing you with distinct variants of flexible diets. You can generate different diets on the go and we'll make sure that you don't exceed the calorie limits you set. We'll take care of your Vegetarian/Non-Vegetarian preference and then your diet will be generated. 
                   <br>
                   <blockquote>
-                    This is an example quotation that uses the blockquote tag.
+                    ~ Failing to plan is planning to fail
                   </blockquote>
                   <br><br>
-                  <center><a href = "#!"  class = "btn orange waves-effect waves-light">Start Planning</a></center>
+                  <center><a href = "http://localhost/HT/get_details.php"  class = "btn lime waves-effect waves-teal">Start Planning</a></center>
               </div>
           </div>
       </div>
@@ -116,24 +119,28 @@
       <div class="section hide-on-small-only"><!-- for med& large screen -->
         <div class="row">
           <div id="BMI-calc-card" class="col s12 m7">
-            <div class="card orange">
+            <div class="card lime">
               <div class="card-content white-text">
                 <h4>BMI Calculator</h4>
                 <div class="row">
-                        <div id="BMI-weight" class="input-field col s12 label-color ">
+                        <div id="BMI-weight" class="input-field col s12 label-color">
                           <input id="My_weight" type="text" >
                           <label for="My_weight">Weight (in kg)</label>
                         </div>
                         <div id="BMI-height" class="input-field col s12 label-color">
                           <input id="My_height" type="text" onkeypress="if (event.keyCode==13) document.getElementById('BMI-btn').click();" >
-                          <label for="My_height">Height (in m)</label>
+                          <label for="My_height">Height (in cm)</label>
                         </div>
                         <br>
                         <div class="col s8"></div>
-                        <button id="BMI-btn" class="btn deep-orange lighten-1 waves-effect waves-light col s4" onclick="BMI_calculator()">Calculate</button>
+                        <button id="BMI-btn" class="btn deep-lime lighten-1 waves-effect waves-teal col s4" onclick="BMI_calculator()">Calculate</button>
                         <div id="BMI-result" class="input-field col s12 label-color">
                           <input id="My_BMI" type="text">
                           <label for="My_BMI">Body Mass Index</label>
+                        </div>
+                        <div class="input-field col s12 label-color">
+                          <input id="BMI_response" type="text">
+                          <label for="BMI_response">Comment</label>
                         </div>
                 </div>
               </div>
@@ -141,9 +148,9 @@
           </div>
           <div id="BMI-desc" class="col s12 m12">
             <center>
-              <h1 id="BMI_header" class = "header center orange-text wow fadeInUp" data-wow-delay="0.6s">BMI Calculator</h1>
-              <p id="p-BMI" class = "wow fadeInDown">Lorem ipsum dolor sit amet, platonem consulatu pertinacia no eos, tale movet iudicabit id vix. Mei eius essent ei. Vel an quas vivendum tincidunt, mel quando ocurreret efficiantur cu.Lorem ipsum dolor sit amet, platonem consulatu pertinacia no eos, tale movet iudicabit id vix. Mei eius essent ei.</p><br>
-              <button id="btn-show-calc" class="btn orange waves-effect waves-light" onclick="openCalc()">Calculate BMI</button>
+              <h1 id="BMI_header" class = "header center teal-text text-darken-1 wow fadeInUp" data-wow-delay="0.6s">BMI Calculator</h1>
+              <p id="p-BMI" class = "wow fadeInDown">Find your Body Mass Index (BMI) and get to know the classification of obesity.</p><br>
+              <button id="btn-show-calc" class="btn lime waves-effect waves-teal" onclick="openCalc()">Calculate BMI</button>
             </center>
           </div>
         </div>
@@ -153,13 +160,13 @@
         <div class="row">
           <div id="BMI-desc-sm" class="col s12 m12">
             <center>
-              <h1 id="BMI_header-sm" class = "header center orange-text wow fadeInUp" data-wow-delay="0.6s">BMI Calculator</h1>
-              <p id="p-BMI-sm" class = "wow fadeInDown">Lorem ipsum dolor sit amet, platonem consulatu pertinacia no eos, tale movet iudicabit id vix. Mei eius essent ei. Vel an quas vivendum tincidunt, mel quando ocurreret efficiantur cu.Lorem ipsum dolor sit amet, platonem consulatu pertinacia no eos, tale movet iudicabit id vix. Mei eius essent ei.</p><br>
-              <button id="btn-show-calc-sm" class="btn orange waves-effect waves-light" onclick="openCalcS()">Calculate BMI</button>
+              <h1 id="BMI_header-sm" class = "header center teal-text text-darken-1 wow fadeInUp" data-wow-delay="0.6s">BMI Calculator</h1>
+              <p id="p-BMI-sm" class = "wow fadeInDown">Find your Body Mass Index (BMI) and get to know the classification of obesity.</p><br>
+              <button id="btn-show-calc-sm" class="btn lime waves-effect waves-teal" onclick="openCalcS()">Calculate BMI</button>
             </center>
           </div>
           <div id="BMI-calc-card-sm" class="col s12 m7">
-            <div class="card orange">
+            <div class="card lime">
               <div class="card-content white-text">
                 <div class="row">
                         <div id="BMI-field" class="input-field label-color col s12">
@@ -168,14 +175,18 @@
                         </div>
                         <div id="BMI-field" class="input-field  label-color col s12">
                           <input id="My_height-sm" type="text" onkeypress="if (event.keyCode==13) document.getElementById('BMI-btn-sm').click();">
-                          <label for="My_height-sm">Height (in m)</label>
+                          <label for="My_height-sm">Height (in cm)</label>
                         </div>
                         <br>
                         <div class="col s7"></div>
-                        <button class="btn deep-orange lighten-1 waves-effect waves-light col s5" id = "BMI-btn-sm" onclick="BMI_calculatorS()">Calculate</button>
+                        <button class="btn deep-lime lighten-1 waves-effect waves-teal col s5" id = "BMI-btn-sm" onclick="BMI_calculatorS()">Calculate</button>
                         <div id="BMI-field" class="input-field label-color col s12">
                           <input id="My_BMI-sm" type="text">
                           <label for="My_BMI-sm">Body Mass Index</label>
+                        </div>
+                        <div class="input-field col s12 label-color">
+                          <input id="BMI_response-sm" type="text">
+                          <label for="BMI_response-sm">Comment</label>
                         </div>
                 </div>
               </div>
@@ -189,27 +200,27 @@
   <div class="container">
     <div id="calorie-desc" class="s12 m12 ">
       <center>
-        <h1 id="calorie_header" class = "header center orange-text wow fadeInUp" data-wow-delay="0.6s">Calorie Finder</h1>
+        <h1 id="calorie_header" class = "header center teal-text text-darken-1 wow fadeInUp" data-wow-delay="0.6s">Calorie Finder</h1>
       </center>
     </div>
      <div class="row">
-        <form class="s12" id="cal_find">
+        <div class="s12" id="cal_find">
           <div class="col m2"></div>
           <div class="input-field col s12 m8">
             <input id="calorie_finder" type="text">
             <label for="calorie_finder">Food item here</label>
-            <center><a href = "javascript:void(0)"  class = "btn orange waves-effect waves-light wow zoomIn " onclick="calfind_card()" id="cal_find_btn">Find</a></center>
+            <center><button class = "btn lime waves-effect waves-teal wow zoomIn " onclick="calfind_card()" id="cal_find_btn">Find</button></center>
           </div>
-        </form>
+        </div>
         <div class="col s12 m6" id="cal_card">
-          <div class="card-panel orange">
-            <span class="white-text">I am a very simple card. I am good at containing small bits of information.
-            I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+          <div class="card-panel lime">
+            <span class="white-text" id='calorie_card'>
             </span>
           </div>
         </div>
       </div>
-  </div>  
+  </div>
+  
 
 
   <div class="divider"></div>
@@ -217,26 +228,26 @@
   <!--Talk to an expert section-->
   <div class="container">
     <div id="sec_Talk_Expert" >
-      <center><h1 class = "header center orange-text wow zoomIn" data-wow-delay = "0.3s">Talk to an Expert</h1></center>
+      <center><h1 class = "header center teal-text text-darken-1 wow zoomIn" data-wow-delay = "0.3s">Talk to an Expert</h1></center>
     </div>
     <div class="row">
 
       <div class = "col s12 m12 l4 wow zoomIn" data-wow-delay = "0.3s">
-        <center><img class = "card-panel hoverable responsive-img" src="http://placehold.it/300x300"></center>
+        <center><img class = "card-panel hoverable responsive-img" width = "300" height="300" src="./img/exp.jpg"></center>
       </div>
 
       <div class = "col s12 m12 l8  wow zoomIn" data-wow-delay = "0.3s">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas facilisis nec lacus at varius. Sed nibh odio, venenatis in enim id, tristique convallis est. Ut rutrum congue neque, nec ullamcorper nibh maximus et. Nulla suscipit velit lorem, nec viverra sem condimentum a. Nam bibendum sapien eget vestibulum venenatis.
+        We'll provide you with a platform where you will have the opportunity to meet/contact skilled dietitians. If you find that eating healthy is difficult to work into your lifestyle because of certain road blocks, a dietitian can work with you to find solutions to problems and barriers. Additionally, they can provide tips, tricks and resources that can assist any individual in reaching their full potential. Drop them a query and they'll get back to you.  
         <br><br>
-        <center><a href = "#!"  class = "btn orange waves-effect waves-light wow zoomIn">Talk</a></center>                  
+        <center><a href = "http://localhost/HT/talktoexpert.php"  class = "btn lime waves-effect waves-teal wow zoomIn">Talk</a></center>                  
       </div>
 
     </div>
   </div>  
   
-  <footer class="page-footer orange">
+  <footer class="page-footer lime">
     <div class="footer-copyright">
-      <center>We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</center>
+      <center><b>Follow us on twitter @htracker</b></center>
     </div>
   </footer>
 
@@ -249,5 +260,7 @@
   <script src="js/smoothscroll.js"></script>
   <script type="text/javascript" src="js/wowinit.js"></script>
   <script type="text/javascript" src="js/home.js"></script>
+  <script type="text/javascript" src="js/login_db_select.js"></script>
+
   </body>
 </html>
