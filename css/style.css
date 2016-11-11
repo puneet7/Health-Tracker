@@ -1,0 +1,77 @@
+.brand-logo{
+	margin-left:3%;
+}
+
+.salad-cover {
+    height: 55vh;
+    background: url('../img/salad.jpg') center center no-repeat scroll;
+    padding-top: 64px!important;
+    margin-top: -64px!important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.tagline{
+    text-shadow: 0 0 10px #000;
+    color: #fff;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+.plan_diet{
+    font-align: right;
+}
+
+.section{
+    padding-top: 64px!important;
+    margin-top: -64px!important;
+}
+
+#BMI-calc-card{ /*To invisible Block*/
+	display: none;
+}
+
+#BMI-calc-card-sm{ /*To invisible Block*/
+    display: none;
+}
+
+.label-color label {
+    color: #FFF;
+}
+
+/* label focus color */
+.label-color input[type=text]:focus + label {
+    color: #FFF;
+}
+
+.label-color input[type=text]:focus {
+    border-bottom: 1px solid #4db6ac;
+    box-shadow: 0 1px 0 0 #4db6ac;
+}
+
+.label-color input[type=text]{
+    border-bottom: 1px #FFF;
+    box-shadow: 0 1px 0 0 #FFF;
+}
+
+.error-label-color input[type=text]{
+    border-bottom: 1px #ff7043;
+    box-shadow: 0 1px 0 0 #FFF;
+}
+
+/* Adding fixed height because content in every card will be different and fixed height will make it look consistent */
+#what-we-do-cards{
+    height: 300px;
+    overflow: hidden;
+}
+
+#cal_card{ /*To invisible Block*/
+    display: none;
+}
